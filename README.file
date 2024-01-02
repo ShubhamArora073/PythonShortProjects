@@ -4,5 +4,5 @@
    a. Create a 10 contacts list (User, Age, Address, Phonenumber) - the output shuld be in Json format. 
    b. Add another prperty for each user call cuntry.
    c. Present only the user that are 30+ age
-   d. Create slack app to present the resoult on web page (127.0.0.1/contact)
+   d. Create flask app to present the resoult on web page (127.0.0.1/contact)
    
