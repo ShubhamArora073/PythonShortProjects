@@ -1,6 +1,7 @@
 import json
+
+
 def add_contact(user, age, address, phone):
-    
     new_contact = {
         "user": user,
         "age": age,
@@ -10,11 +11,12 @@ def add_contact(user, age, address, phone):
     my_contacts.append(new_contact)
     return my_contacts
 
+
 # Initialize an empty contacts list
 my_contacts = []
 
 # Loop to add three contacts
-for i in range(3):
+for i in range(2):
     # Get contact information from the user
     user = input("Enter the name of the contact: ")
     age = input("Enter the age of the contact: ")
@@ -28,6 +30,7 @@ for i in range(3):
 print("Your contacts:")
 for contact in my_contacts:
     contacts_json = json.dumps(contact, indent=4)
-    contact= contacts_json
+    contact = contacts_json
     print(contact)
-
+    with open('contacts.html', 'w') as f:
+        print('My Contacts are:', contact, file=f)
