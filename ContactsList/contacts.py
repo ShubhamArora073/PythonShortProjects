@@ -30,7 +30,8 @@ for i in range(2):
 print("Your contacts:")
 for contact in my_contacts:
     contacts_json = json.dumps(contact, indent=4)
-    contact = contacts_json
-    print(contact)
-    with open('contacts.html', 'w') as f:
+    print(contacts_json)
+with open('contacts.html', 'w') as f:
+    for contact in my_contacts:
+        contacts_json = json.dumps(contact, indent=4)
         print('My Contacts are:', contact, file=f)
