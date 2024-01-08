@@ -26,12 +26,11 @@ for i in range(2):
     # Add a new contact
     my_contacts = add_contact(user, age, address, phone)
 
-
-# Convert the list of contacts to a JSON string
-contacts_json = json.dumps(my_contacts, indent=4)
-print(contacts_json)
-
-# Write the JSON string to the file
-with open('contacts.html', 'w') as f:
-    f.write('My Contacts are:\n')
-    f.write(contacts_json)
+# Print the updated contacts list
+print("Your contacts:")
+for contact in my_contacts:
+    contacts_json = json.dumps(contact, indent=4)
+    contact = contacts_json
+    print(contact)
+    with open('contacts.html', 'w') as f:
+        print('My Contacts are:', contact, file=f)
