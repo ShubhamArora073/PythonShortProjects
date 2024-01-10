@@ -6,6 +6,7 @@ minimum_age = 30
 
 def create_contact():
     my_contacts = []
+    country = "usa"
     for i in range(2):
         user = input("Enter the name of the contact: ")
         age = int(input("Enter the age of the contact: "))
@@ -18,6 +19,7 @@ def create_contact():
             "address": address,
             "phone": phone
         }
+        new_contact.update({"country": country})
         if new_contact['age'] >= minimum_age:
             my_contacts.append(new_contact)
         else:
