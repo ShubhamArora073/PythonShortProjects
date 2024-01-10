@@ -1,40 +1,35 @@
 import json
 
-minimum_age = 30
 
-
-def create_contact():
-    my_contacts = []
-    for i in range(2):
-        user = input("Enter the name of the contact: ")
-        age = int(input("Enter the age of the contact: "))
-        address = input("Enter the address of the contact: ")
-        phone = input("Enter the phone of the contact: ")
-
-        new_contact = {
-            "user": user,
-            "age": age,
-            "address": address,
-            "phone": phone
-        }
-        if new_contact['age'] >= minimum_age:
-            my_contacts.append(new_contact)
-        else:
-            print("The age", new_contact['age'], "is less than", minimum_age, ",Please change the age !")
+def add_contact(user, age, address, phone):
+    new_contact = {
+        "user": user,
+        "age": age,
+        "address": address,
+        "phone": phone
+    }
+    my_contacts.append(new_contact)
     return my_contacts
 
 
-def display_contacts(contacts):
-    contacts_json = json.dumps(contacts, indent=4)
-    with open('templates/contacts.html', 'w') as f:
-        f.write('My Contacts are:\n')
-        f.write(contacts_json)
+# Initialize an empty contacts list
+my_contacts = []
 
+# Loop to add three contacts
+for i in range(2):
+    # Get contact information from the user
+    user = input("Enter the name of the contact: ")
+    age = input("Enter the age of the contact: ")
+    address = input("Enter the address of the contact: ")
+    phone = input("Enter the phone of the contact: ")
 
-def main():
-    my_contacts = create_contact()
-    display_contacts(my_contacts)
+    # Add a new contact
+    my_contacts = add_contact(user, age, address, phone)
 
+# Convert the list of contacts to a JSON string
+contacts_json = json.dumps(my_contacts, indent=4)
 
-if __name__ == "__main__":
-    main()
+# Write the JSON string to the file
+with open('contacts.html', 'w') as f:
+    f.write('My Contacts are:\n')
+    f.write(contacts_json)
