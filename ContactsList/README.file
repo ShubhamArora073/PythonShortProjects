@@ -2,7 +2,7 @@
 
 1. Contact list  
    a. Create a 3 contacts list (user, age, address, phone) - the output shuld be in Json format.
-   b. Add another prperty for each user call cuntry.
-   c. Present only the user that are 30+ age
+   b. Present only the user that are 30+ age
+   c. Add another prperty for each user call cuntry.
    d. Create flask app to present the resoult on web page (127.0.0.1/contact)
    
