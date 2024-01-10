@@ -6,3 +6,6 @@
    c. Add another prperty for each user call cuntry.
    d. Create flask app to present the resoult on web page (127.0.0.1/contact)
    
+-----
+To run html code locally > go to the template folder and run> "python3 -m http.server" then you can check in your browser "http://localhost:8000/"
+

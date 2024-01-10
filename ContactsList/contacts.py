@@ -29,8 +29,8 @@ def create_contact():
 
 def display_contacts(contacts):
     contacts_json = json.dumps(contacts, indent=4)
-    with open('templates/contacts.html', 'w') as f:
-        f.write('My Contacts are:\n')
+    with open('templates/contacts.json', 'w') as f:
+        #f.write('My Contacts are:\n')
         f.write(contacts_json)
 
 
