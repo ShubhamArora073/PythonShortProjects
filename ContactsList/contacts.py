@@ -1,10 +1,10 @@
 import json
-#test
-
-minimum_age = 30
-
+import pathlib
+import boto3
+import os
 
 def create_contact():
+    minimum_age = 30
     my_contacts = []
     country = "usa"
     for i in range(2):
@@ -26,17 +26,22 @@ def create_contact():
             print("The age", new_contact['age'], "is less than", minimum_age, ",Please change the age !")
     return my_contacts
 
-
 def display_contacts(contacts):
     contacts_json = json.dumps(contacts, indent=4)
     with open('templates/contacts.json', 'w') as f:
-        #f.write('My Contacts are:\n')
         f.write(contacts_json)
 
-
+def upload_file_s3():
+    s3 = boto3.client("s3")
+    bucket_name = "contacts-demo-roi"
+    object_name = "templates/contacts.json"
+    file_name = os.path.join(pathlib.Path(__file__).parent.resolve(), "templates/contacts.json")
+    response = s3.upload_file(file_name, bucket_name, object_name)
+    print(response)
 def main():
     my_contacts = create_contact()
     display_contacts(my_contacts)
+    upload_file_s3()
 
 
 if __name__ == "__main__":

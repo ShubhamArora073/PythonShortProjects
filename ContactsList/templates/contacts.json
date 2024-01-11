@@ -1,23 +1,16 @@
 [
     {
-        "user": "123",
-        "age": "123",
-        "address": "123",
-        "phone": "123",
+        "user": "David",
+        "age": 34,
+        "address": "fd",
+        "phone": "34534",
         "country": "usa"
     },
     {
-        "user": "123",
-        "age": "123",
-        "address": "123",
-        "phone": "123",
-        "country": "usa"
-    },
-    {
-        "user": "123",
-        "age": "123",
-        "address": "123",
-        "phone": "123",
+        "user": "Avi",
+        "age": 35,
+        "address": "sdf",
+        "phone": "3453",
         "country": "usa"
     }
 ]
