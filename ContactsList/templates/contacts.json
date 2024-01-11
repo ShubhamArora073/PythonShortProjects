@@ -1,30 +1,16 @@
 [
     {
-        "user": "David",
-        "age": 34,
-        "address": "fd",
-        "phone": "34534",
+        "user": "test",
+        "age": 44,
+        "address": "2134",
+        "phone": "234",
         "country": "usa"
     },
     {
-        "user": "roi",
-        "age": "123",
-        "address": "123",
-        "phone": "123",
-        "country": "usa"
-    },
-    {
-        "user": "shubham",
-        "age": "123",
-        "address": "123",
-        "phone": "123",
-        "country": "usa"
-    },
-    {
-        "user": "nishth",
-        "age": "123",
-        "address": "123",
-        "phone": "123",
+        "user": "test1",
+        "age": 55,
+        "address": "asdf",
+        "phone": "234",
         "country": "usa"
     }
 ]

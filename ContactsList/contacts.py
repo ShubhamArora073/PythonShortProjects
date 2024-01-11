@@ -39,8 +39,8 @@ def display_contacts(contacts):
 def upload_file_s3():
     try:
         s3 = boto3.client("s3")
-        bucket_name = "contacts-demo-roi"
-        object_name = "templates/contacts.json"
+        bucket_name = "contacts-demo-shubham"
+        object_name = "contacts.json"
         file_name = os.path.join(pathlib.Path(__file__).parent.resolve(), "templates/contacts.json")
         response = s3.upload_file(file_name, bucket_name, object_name)
         print(response)
