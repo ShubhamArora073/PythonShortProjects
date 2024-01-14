@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    fetch('contacts.json')
+    fetch('/static/contacts.json')
         .then(response => response.json())
         .then(data => {
             const tableHeader = document.getElementById('tableHeader');

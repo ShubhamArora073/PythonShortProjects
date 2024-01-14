@@ -31,7 +31,7 @@ def create_contact():
 def display_contacts(contacts):
     try:
         contacts_json = json.dumps(contacts, indent=4)
-        with open('templates/contacts.json', 'w') as f:
+        with open('static/contacts.json', 'w') as f:
             f.write(contacts_json)
     except Exception as e:
         print(e)
@@ -41,7 +41,7 @@ def upload_file_s3():
         s3 = boto3.client("s3")
         bucket_name = "contacts-demo-shubham"
         object_name = "contacts.json"
-        file_name = os.path.join(pathlib.Path(__file__).parent.resolve(), "templates/contacts.json")
+        file_name = os.path.join(pathlib.Path(__file__).parent.resolve(), "templates/index.json")
         response = s3.upload_file(file_name, bucket_name, object_name)
         print(response)
     except Exception as e:
